@@ -1,39 +1,44 @@
-colors:
+var colorMeta = {
+comboName:'Selesnya', comboCode:'colors="green,white"'
+comboName:'Orzhov', comboCode:'colors="black,white"'
+comboName:'Boros', comboCode:'colors="red,white"'
+comboName:'Azorius', comboCode:'colors=blue,white'
+comboName:'Dimir', comboCode:'colors="black,blue"'
+comboName:'Rakdos', comboCode:'colors="black,red"'
+comboName:'Golgari', comboCode:'colors="black,green"'
+comboName:'Izzet', comboCode:'colors="blue,red"'
+comboName:'Simic', comboCode:'colors="blue,green"'
+comboName:'Gruul', comboCode:'colors="green,red"'
+comboName:'Naya', comboCode:'colors="green,red,white"'
+comboName:'Esper', comboCode:'colors="black,blue,white"'
+comboName:'Grixis', comboCode:'colors="black,blue,red"'
+comboName:'Jund', comboCode:'colors="black,green,red"'
+comboName:'Bant', comboCode:'colors="blue,green&white"'
+comboName:'Abzan', comboCode:'colors="black,green,white"'
+comboName:'Temur', comboCode:'colors="blue,green,red"'
+comboName:'Jeskai', comboCode:'colors="blue,red,white"'
+comboName:'Mardu', comboCode:'colors="black,red,white"'
+comboName:'Sultai', comboCode:'colors="black,blue,green"'
+comboName:'Glint', comboCode:'colors="black,blue,green,red"'
+comboName:'Dune', comboCode:'colors="black,green,red,white"'
+comboName:'Ink', comboCode:'colors="blue,green,red,white"'
+comboName:'Witch', comboCode:'colors="black,blue,green,white"'
+comboName:'Yore', comboCode:'colors="black,blue,red,white"'
+comboName:'fiveColor', comboCode:'colors="black,blue,green,red,white"'
+}
 
-Selesnya = colors=green&&white
-Orzhov = colors=black&&white
-Boros = colors=red&&white
-Azorius = colors=blue&&white
-Dimir = colors=black&&blue
-Rakdos =  colors=black&&red
-Golgari = colors=black&&green
-Izzet = colors=blue&&red
-Simic = colors=blue&&green
-Gruul = colors=green&&red
-Naya = colors=green&&red&&white
-Esper = colors=black&&blue&&white
-Grixis = colors=black&&blue&&red
-Jund = colors=black&&green&&red
-Bant = colors=blue&&green&white
-Abzan = colors=black&&green&&white
-Temur = colors=blue&&green&&red
-Jeskai = colors=blue&&red&&white
-Mardu = colors=black&&red&&white
-Sultai = colors=black&&blue&&green
-Glint = colors=black&&blue&&green&&red
-Dune = colors=black&&green&&red&&white
-Ink = colors=blue&&green&&red&&white
-Witch = colors=black&&blue&&green&&white
-Yore = colors=black&&blue&&red&&white
-fiveColor = colors=black&&blue&&green&&red&&white
 
 
-Expansions:
 
-Alliances =
-Antiquities =
-Apocalypse =
-Arabian Nights =
+
+
+
+<!-- Expansions:
+
+Alliances = ALL
+Antiquities = ATQ
+Apocalypse = APC
+Arabian Nights = ARN
 Battle Royale Box Set =
 Beatdown Box Set =
 Chronicles =
@@ -74,4 +79,4 @@ Urza's Destiny =
 Urza's Legacy =
 Urza's Saga =
 Visions =
-Weatherlight =
+Weatherlight = -->
