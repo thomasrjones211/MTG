@@ -1,0 +1,77 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
+
+#black {
+  height: 50px;
+  width:50px;
+}
+
+.flatBlack {
+  background-image: url(../images/fSwamp.png)
+}
+
+.glassBlack {
+  background-image: url(../images/gSwamp.png)
+}
+
+#blue {
+  height: 50px;
+  width:50px;
+}
+
+.flatBlue {
+  background-image: url(../images/fIsland.png)
+}
+
+.glassBlue {
+  background-image: url(../images/gIsland.png)
+}
+
+#green {
+  height: 50px;
+  width:50px;
+}
+
+.flatGreen {
+  background-image: url(../images/fForest.png)
+}
+
+.glassGreen {
+  background-image: url(../images/gForest.png)
+}
+
+
+#red {
+  height: 50px;
+  width:50px;
+}
+
+.flatRed {
+  background-image: url(../images/fMountain.png)
+}
+
+.glassRed {
+  background-image: url(../images/gMountain.png)
+}
+
+#white {
+  height: 50px;
+  width:50px;
+}
+
+.flatWhite {
+  background-image: url(../images/fPlain.png)
+}
+
+.glassWhite {
+  background-image: url(../images/gPlain.png)
+}
