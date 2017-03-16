@@ -38,9 +38,18 @@
 $("#submit").click(function(event) {
   event.preventDefault()
   //console.log($("#addRarity").val())
-  var addRarity = $("#Rarity").val()
+  var addTheme = $("#colorTheme").val();
+  var addType = $("#cardType").val();
+  var addRarity = $("#rarity").val();
+  var addEternal = $("#setsEternal").val();
+  var addModern = $("#setsModern").val();
+  var addSearch = $("#nameSearch").val();
+  console.log(addTheme)
+  console.log(addType)
   console.log(addRarity)
-  console.log("hello Worlddd")
+  console.log(addEternal)
+  console.log(addModern)
+  console.log(addSearch)
 })
 
 

@@ -20,11 +20,16 @@
   </head>
   <body>
     <!-- <div class="card-container"> // for styles1-->
-    <form class="search-form" action="index.html" method="post">
+    <div class="logo">
+      <div class="col-12 col-md-5 col-lg-4">
+        <img src="media/chandra_vector.png" alt="chandra-logo">
+      </div>
+    </div>
+    <form class="form-group" action="index.html" method="post">
       <div class="color-container">
         <h2>Color Selection</h2>
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-4 col-lg-4">
             <div class="byColor" role="group">
               <p>Color options:</p>
               <div class="icons-mana" role="group" aria-label="...">
@@ -37,52 +42,52 @@
             </div>
           </div>
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-4">
-              <p>Color Theme: (by Name)</p>
-              <div class="style-select">
-              <select name="colorTheme" id="colorTheme">
-                <option value=""></option>
-                <optgroup label="- Two Color -">
-                  <option value="Azorius">Azorius</option>
-                  <option value="Boros">Boros</option>
-                  <option value="Dimir">Dimir</option>
-                  <option value="Golgari">Golgari</option>
-                  <option value="Gruul">Gruul</option>
-                  <option value="Izzet">Izzet</option>
-                  <option value="Orzhov">Orzhov</option>
-                  <option value="Rakdos">Rakdos</option>
-                  <option value="Selesnya">Selesnya</option>
-                  <option value="Simic">Simic</option>
-                </optgroup>
-                <optgroup label="- Three Color -">
-                  <option value="Abzan">Abzan</option>
-                  <option value="Bant">Bant</option>
-                  <option value="Esper">Esper</option>
-                  <option value="Grixis">Grixis</option>
-                  <option value="Temur">Temur</option>
-                  <option value="Jeskai">Jeskai</option>
-                  <option value="Jund">Jund</option>
-                  <option value="Mardu">Mardu</option>
-                  <option value="Naya">Naya</option>
-                  <option value="Sultai">Sultai</option>
-                </optgroup>
-                <optgroup label="- Four Color -">
-                  <option value="Glint">Glint</option>
-                  <option value="Dune">Dune</option>
-                  <option value="Ink">Ink</option>
-                  <option value="Witch">Witch</option>
-                  <option value="Yore">Yore</option>
-                </optgroup>
-                <option value="fiveColor">All Five Colors</option>
-              </select>
+          <div class="col-12 col-md-3 col-lg-4">
+            <p>Color Theme: (by Name)</p>
+            <div class="style-select">
+            <select name="colorTheme" id="colorTheme">
+              <option value=""></option>
+              <optgroup label="- Two Color -">
+                <option value="Azorius">Azorius</option>
+                <option value="Boros">Boros</option>
+                <option value="Dimir">Dimir</option>
+                <option value="Golgari">Golgari</option>
+                <option value="Gruul">Gruul</option>
+                <option value="Izzet">Izzet</option>
+                <option value="Orzhov">Orzhov</option>
+                <option value="Rakdos">Rakdos</option>
+                <option value="Selesnya">Selesnya</option>
+                <option value="Simic">Simic</option>
+              </optgroup>
+              <optgroup label="- Three Color -">
+                <option value="Abzan">Abzan</option>
+                <option value="Bant">Bant</option>
+                <option value="Esper">Esper</option>
+                <option value="Grixis">Grixis</option>
+                <option value="Temur">Temur</option>
+                <option value="Jeskai">Jeskai</option>
+                <option value="Jund">Jund</option>
+                <option value="Mardu">Mardu</option>
+                <option value="Naya">Naya</option>
+                <option value="Sultai">Sultai</option>
+              </optgroup>
+              <optgroup label="- Four Color -">
+                <option value="Glint">Glint</option>
+                <option value="Dune">Dune</option>
+                <option value="Ink">Ink</option>
+                <option value="Witch">Witch</option>
+                <option value="Yore">Yore</option>
+              </optgroup>
+              <option value="fiveColor">All Five Colors</option>
+            </select>
             </div>
           </div>
         </div>
       </div>
       <div class="type-container">
         <div class="row">
-          <h2>Type Selection</h2>
-          <div class="col-12 col-md-6 col-lg-4">
+        <h2>Type Selection</h2>
+          <div class="col-12 col-md-4 col-lg-4">
           <p>Card Type:</p>
             <div class="style-select">
             <select name="cardType" id="cardType">
@@ -103,24 +108,27 @@
             	<option value="Snow">Snow</option>
             	<option value="Sorcery">Sorcery</option>
             	<option value="Tribal">Tribal</option>
-            	<option value="Vanguard">Vanguard</option>
+            	<!-- <option value="Vanguard">Vanguard</option> -->
             	<option value="World">World</option>
-              </select>
+            </select>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <p>Rarity:</p>
-              <div class="style-select">
-              <select name="Rarity" id="Rarity">
-                <option value=""></option>
-                <option value="Common">Common</option>
-                <option value="Uncommon">Uncommon</option>
-                <option value="Rare">Rare</option>
-                <!-- <option value="Mythic Rare">Mythic Rare</option> -->
-              </select>
+          <div class="col-12 col-md-3 col-lg-4">
+          <p>Rarity:</p>
+            <div class="style-select">
+            <select name="rarity" id="rarity">
+              <option value=""></option>
+              <option value="Basic Land">Basic Land</option>
+              <option value="Common">Common</option>
+              <option value="Uncommon">Uncommon</option>
+              <option value="Rare">Rare</option>
+              <option value="Mythic Rare">Mythic Rare</option>
+              <option value="Special">Special</option>
+            </select>
             </div>
           </div>
         </div>
+      </div>
       <div class="sets-container">
         <div class="row">
           <h2>Set Selection</h2>
@@ -175,6 +183,7 @@
               <option value="Visions">Visions</option>
               <option value="Weatherlight">Weatherlight</option>
             </select>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -314,25 +323,25 @@
               <option value="Zendikar">Zendikar</option>
               <option value="Zendikar Expeditions">Zendikar Expeditions</option>
             </select>
+            </div>
           </div>
         </div>
-      </div>
         <div class="row">
-          <div class="form-group">
-            <div class="col-12 col-md-6 col-lg-4 align-self-center">
-              <label class="text" for="names">Name Search:</label>
+          <div class="search-group">
+            <div class="col-10 col-md-8 col-lg-6 align-self-center">
+              <label class="text" for="names">Name Search:  <em>Use "quote marks" for exact card name search</em></label>
               <input id="nameSearch" type="text" class="form-control" placeholder='e.g.     Angel         vs           "Serra Angel"'>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-4 align-self-center">
+          <div class="col-10 col-md-8 col-lg-6 align-self-center">
             <button id="submit" type="submit" class="btn btn-default">Submit</button>
           </div>
         </div>
     </form>
     <!-- <div class="byUserInput">
-      <p>Use "quote marks" for specific card, exact name search'</p>
+
       <div class="row">
         <div class="col-12 col-md-6 col-lg-4">
           <div class="input-group">
