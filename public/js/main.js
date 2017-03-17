@@ -115,7 +115,7 @@ function getName() {
 $("#submit").click(function(event) {
   event.preventDefault()
 
-  //$(".pic-container").empty();
+  $(".pic-container").empty();
   // $(".pic-container").html("")
   //console.log($("#addRarity").val())
   //var addColors = selectColors()
