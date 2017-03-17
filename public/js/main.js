@@ -1,33 +1,32 @@
 $("document").ready(function() {
   $("button").click(function() {
-    //getCard()
   })
 });
 
 
 $('#black').click(function() {
   $(this).toggleClass('glassBlack').toggleClass("active")
-  console.log("Black was clicked")
+  //console.log("Black was clicked")
 })
 
 $('#blue').click(function() {
   $(this).toggleClass('glassBlue').toggleClass("active")
-  console.log("Blue was clicked")
+  //console.log("Blue was clicked")
 })
 
 $('#green').click(function() {
   $(this).toggleClass('glassGreen').toggleClass("active")
-  console.log("Green was clicked")
+  //console.log("Green was clicked")
 })
 
 $('#red').click(function() {
   $(this).toggleClass('glassRed').toggleClass("active")
-  console.log("Red was clicked")
+  //console.log("Red was clicked")
 })
 
 $('#white').click(function() {
   $(this).toggleClass('glassWhite').toggleClass("active")
-  console.log("White was clicked")
+  //console.log("White was clicked")
 })
 
 function getActive() {
@@ -38,7 +37,7 @@ function getActive() {
   if(activeDivs == 0) {
     return "something"
   } else {
-  console.log(activeDivs)
+  //console.log(activeDivs)
     for (var i = 0; i < activeDivs.length; i++) {
         colorStr += (activeDivs[i].id) +"|"
      }
@@ -51,11 +50,11 @@ function getActive() {
 function getType() {
   var optType = $("#cardType").val();
   var typeSearch = "&type=" + optType;
-  console.log(optType)
+  //console.log(optType)
   if($("#cardType").val() === "") {
     return ""
   } else {
-  console.log(typeSearch)
+  //console.log(typeSearch)
   return typeSearch;
   }
 }
@@ -66,17 +65,10 @@ function getRarity() {
   if ($("#rarity").val() === "") {
     return ""
   } else {
-    console.log(raritySearch)
+    //console.log(raritySearch)
     return raritySearch;
     }
   }
-  // if(optRarity == 0) {
-  //   return
-  // } else {
-  // console.log(raritySearch)
-  // return raritySearch;
-  // }
-//}
 
 function getEternal() {
   var optEternal = $("#setsEternal").val();
@@ -84,7 +76,7 @@ function getEternal() {
   if($("#setsEternal").val() === "") {
     return ""
   } else {
-  console.log(eternalSearch)
+  //console.log(eternalSearch)
   return eternalSearch;
   }
 }
@@ -95,7 +87,7 @@ function getModern() {
   if($("#setsModern").val() === "") {
     return ""
   } else {
-  console.log(modernSearch)
+  //console.log(modernSearch)
   return modernSearch;
   }
 }
@@ -106,19 +98,15 @@ function getName() {
   if($("#nameSearch").val() === "") {
     return ""
   } else {
-  console.log(textSearch)
+  //console.log(textSearch)
   return textSearch;
   }
 }
-
 
 $("#submit").click(function(event) {
   event.preventDefault()
 
   $(".pic-container").empty();
-  // $(".pic-container").html("")
-  //console.log($("#addRarity").val())
-  //var addColors = selectColors()
   //var addTheme = $("#colorTheme").val();
   var colorSelect = getActive();
   var typeSelect = getType();
@@ -131,99 +119,24 @@ $("#submit").click(function(event) {
   var getUrl = baseUrl + colorSelect + typeSelect + raritySelect + eternalSelect + modernSelect + nameSelect;
   console.log(getUrl)
   $.get(getUrl).then(function(data) {
-    console.log(data)
-    var cards = data.cards; //array of cards
+    //console.log(data)
+    var cards = data.cards;
+    //array of cards
     for (var i = 0; i < cards.length; i++) {
       updatePage(cards[i]);
     }
   })
-
   //console.log(addColors)
   //console.log(addTheme)
-  console.log(colorSelect)
-  console.log(typeSelect)
-  console.log(raritySelect)
-  console.log(eternalSelect)
-  console.log(modernSelect)
-  console.log(nameSelect)
+  // console.log(colorSelect)
+  // console.log(typeSelect)
+  // console.log(raritySelect)
+  // console.log(eternalSelect)
+  // console.log(modernSelect)
+  // console.log(nameSelect)
 })
 
 
-
-// function getCard() {
-//   var url = "https://api.magicthegathering.io/v1/cards?"
-//   url + colorSelect + typeSelect + raritySelect + eternalSelect + modernSelect + nameSelect);
-//   $.get(url).then(function(data) {
-//     console.log(data)
-//     var cards = data.cards; //array of cards
-//     for (var i = 0; i < cards.length; i++) {
-//       updatePage(cards[i]);
-//     }
-//   })
-  // .catch(function(error) {
-  //   console.log(error)
-  // }
-// };
-
 function updatePage(card) {
-  //$("body").append(card.name)
     $(".pic-container").append('<img src="'+ card.imageUrl + '">')
 };
-
-
-
-
-
-//
-// function updatePage(card) {
-//   //$("body").append(card.name)
-//   $(".pic-container").append('<img src="'+ card.imageUrl + '">')
-// };
-//               //
-//               // function showMessage(title, poster) {
-//               //   $("body").append("Cool movie, yo")
-//               // }
-//               //
-//               //   $.get("http://www.omdbapi.com/?t=rambo",
-//               //   function(data) {
-//               // 	console.log(data);
-//               // })
-//     }
-//     // var cards = data.cards; //array of cards
-//     // for (var i = 0; i < cards.length; i++) {
-//     //   updatePage(cards[i]);
-//     }
-//   })
-//   // .catch(function(error) {
-//   //   console.log(error)
-//   // }
-// };
-
-
-
-
-
-
-// init active snippet
-// initEvents : function() {
-//   var obj = this;
-//
-//   obj.dd.on('click', function(event){
-//     $('.active').not($(this)).removeClass('active');
-//     $(this).toggleClass('active');
-//     event.stopPropagation();
-//   });
-// }
-
-
-// string update <script>
-// $( "select" )
-//   .change(function() {
-//     var str = "";
-//     $( "select option:selected" ).each(function() {
-//       str += $( this ).text() + " ";
-//     });
-//     $( "div" ).text( str );
-//   })
-//   .trigger( "change" );
-// </script>

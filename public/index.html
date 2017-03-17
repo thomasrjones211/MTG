@@ -20,38 +20,37 @@
   </head>
   <body>
     <!-- <div class="card-container"> // for styles1-->
-    <div class="logo">
-      <div class="col-sm-12 col-md-6 col-lg-4">
-        <img src="images/chandra_vector.png" alt="chandra-logo">
-      </div>
-    </div>
     <div class="container">
+      <div class="logo">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <img src="images/chandra_vector.png" alt="chandra-logo">
+        </div>
+      </div>
       <form class="form-group" action="index.html" method="post">
         <div class="color-container">
           <h2>Color Selection</h2>
           <div class="row">
-            <div class="col-sm-6 col-md-3 col-lg-4 align-center">
+            <div class="col-sm-6 col-md-3 col-md-offset-1 col-lg-3">
               <div class="byColor" role="group">
                 <p>Color options:</p>
                 <div class="icons-mana" role="group" aria-label="...">
                   <div class="col-1">
-                    <!-- <img src="images/fSwamp.png" alt="black" id="black"> -->
                   </div>
-                  <div class="col-1 flatBlack" id="black">
+                    <div class="col-1 flatBlack" id="black">
                   </div>
-                  <div class="col-1 flatBlue" id="blue">
+                    <div class="col-1 flatBlue" id="blue">
                   </div>
-                  <div class="col-1 flatGreen" id="green">
+                    <div class="col-1 flatGreen" id="green">
                   </div>
-                  <div class="col-1 flatRed" id="red">
+                    <div class="col-1 flatRed" id="red">
                   </div>
-                  <div class="col-1 flatWhite" id="white">
+                    <div class="col-1 flatWhite" id="white">
                   </div>
                 </div>
               </div>
             </div>
           <div class="row">
-            <div class="col-sm-6 col-md-3 col-lg-4">
+            <div class="col-sm-6 col-md-3 col-lg-4 col-lg-offset-0">
               <p>Color Theme: (by Name)</p>
               <div class="style-select">
               <select name="colorTheme" id="colorTheme">
@@ -342,7 +341,7 @@
           <div class="container">
             <div class="row">
               <div class="search-group">
-                <div class="offset-2 col-sm-8 col-md-8 col-lg-6">
+                <div class="col-sm-8 col-md-8 col-lg-6" align="end">
                   <label class="text" for="names">Name Search:  <em>Use "quote marks" for exact card name search</em></label>
                   <input id="nameSearch" type="text" class="form-control" placeholder='e.g.     Angel         vs           "Serra Angel"'>
                 </div>
@@ -353,10 +352,9 @@
               <p></p>
               <p></p>
               <p></p>
-              <p></p>
             </div>
             <div class="row">
-              <div class="col-2 align-end">
+              <div class="col-2" align="start">
                 <button id="submit" type="submit" class="btn btn-default">Submit</button>
               </div>
             </div>
@@ -365,21 +363,8 @@
     </div>
     <!-- <div class="byUserInput">
 
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="input-group">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Name Search</button>
-            </span>
-            <input id="nameSearch" type="text" class="form-control" placeholder='e.g.     Angel         vs           "Serra Angel"'>
-          </div>
-        </div>
-    </div> -->
     <!-- </div> close styles1-->
     <div class="pic-container">
-
-
-
 
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
