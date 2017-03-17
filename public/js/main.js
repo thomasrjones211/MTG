@@ -1,9 +1,8 @@
-// $("document").ready(function() {
-//   $("button").click(function() {
-//     getCard()
-//
-//   })
-// });
+$("document").ready(function() {
+  $("button").click(function() {
+    //getCard()
+  })
+});
 
 
 $('#black').click(function() {
@@ -36,21 +35,25 @@ function getActive() {
   var activeDivs = $('.active')
   var colorSearch = "&colors=";
   var colorStr = ""
-    //console.log(activeDivs)
+  if(activeDivs == 0) {
+    return "something"
+  } else {
+  //console.log(activeDivs)
     for (var i = 0; i < activeDivs.length; i++) {
         colorStr += (activeDivs[i].id) +"|"
      }
      activeColors = colorSearch + (colorStr.slice(0,-1))
     // console.log(activeColors)
      return activeColors
+   }
 }
 
 function getType() {
   var optType = $("#cardType").val();
   var typeSearch = "&type=" + optType;
   console.log(optType)
-  if(optType == 0) {
-    return
+  if($("#cardType").val() === "") {
+    return ""
   } else {
   console.log(typeSearch)
   return typeSearch;
@@ -60,19 +63,26 @@ function getType() {
 function getRarity() {
   var optRarity = $("#rarity").val();
   var raritySearch = "&rarity=" + optRarity;
-  if(optRarity == 0) {
-    return
+  if ($("#rarity").val() === "") {
+    return ""
   } else {
-  console.log(raritySearch)
-  return raritySearch;
+    console.log(raritySearch)
+    return raritySearch;
+    }
   }
-}
+  // if(optRarity == 0) {
+  //   return
+  // } else {
+  // console.log(raritySearch)
+  // return raritySearch;
+  // }
+//}
 
 function getEternal() {
   var optEternal = $("#setsEternal").val();
-  var eternalSearch = "&sets=" + optEternal;
-  if(optEternal == 0) {
-    return
+  var eternalSearch = "&setName=" + optEternal;
+  if($("#setsEternal").val() === "") {
+    return ""
   } else {
   console.log(eternalSearch)
   return eternalSearch;
@@ -81,9 +91,9 @@ function getEternal() {
 
 function getModern() {
   var optModern = $("#setsModern").val();
-  var modernSearch = "&sets=" + optModern;
-  if(optModern == 0) {
-    return
+  var modernSearch = "&setName=" + optModern;
+  if($("#setsModern").val() === "") {
+    return ""
   } else {
   console.log(modernSearch)
   return modernSearch;
@@ -93,88 +103,20 @@ function getModern() {
 function getName() {
   var addName = $("#nameSearch").val();
   var textSearch = "&name=" + addName;
-  if(addName == 0) {
-    return
+  if($("#nameSearch").val() === "") {
+    return ""
   } else {
   console.log(textSearch)
   return textSearch;
   }
 }
 
-//   function myFunction(item) {
-//   sum += item;
-//   demo.innerHTML = sum;
-//     $('.active').attr('id')
-//   )
-//   if($('.active').length > 0) {
-//    console.log('.attrib('id')')
-// }
-
-
-
-
-
-
-
-// $('#ButtonA, #ButtonB, #ButtonC').toggle(function() { // this refer to the just clicked button.
-//     $('button.active').click(); // Remove active class from all other buttons.
-//     $(this).addClass("active");
-// }, function() {
-//     $(this).removeClass("active");
-// });
-
-// function selectColors(){
-//   if ($("#blue:glassBlack").val() != "black"
-//   && $("#black:glassBlue").val() != "blue"
-//   && $("#green:glassGreen").val() != "green"
-//   && $("#red:glassRed").val() != "red"
-//   && $("#white:glassWhite").val() != "white"){
-//     return "";
-//   } else {
-//     let colorSearch = "&colors=";
-//     if ($("#black:glassBlack").val() == "black") {colorSearch += "|black";}
-//     if ($("#blue:glassBlue").val() == "blue") {colorSearch += "blue";}
-//     if ($("#green:glassGreen").val() == "green") {colorSearch += "|green";}
-//     if ($("#red:glassRed").val() == "red") {colorSearch += "|red";}
-//     if ($("#white:glassWhite").val() == "white") {colorSearch += "|white";}
-//     return colorSearch
-//     console.log(colorSearch)
-//   }
-// }
-
-
-
-// $("#addTheme").select(function() {
-//   let theme =
-//   var $query = $.getJSON('https://api.magicthegathering.io/v1/cards?name=' + search + colorPick);
-//   $query.done((data) => {
-//     if($query.status !== 200){
-//       return;
-//     }
-//     console.log(data);
-//     display(data);
-//   })
-// })
-
-// function getName() {
-//   var url = "https://api.magicthegathering.io/v1/cards?name="
-//   url += $("input").val()
-//   $.get(url).then(function(data) {
-//     console.log(data)
-//     var cards = data.cards; //array of cards
-//     for (var i = 0; i < cards.length; i++) {
-//       updatePage(cards[i]);
-//     }
-//   })
-//               // .catch(function(error) {
-//               //   console.log(error)
-//               // }
-// };
-
-
 
 $("#submit").click(function(event) {
   event.preventDefault()
+
+  $(".pic-container").empty();
+  // $(".pic-container").html("")
   //console.log($("#addRarity").val())
   //var addColors = selectColors()
   //var addTheme = $("#colorTheme").val();
@@ -184,13 +126,17 @@ $("#submit").click(function(event) {
   var eternalSelect = getEternal();
   var modernSelect = getModern();
   var nameSelect = getName();
-  // // $.getJSON('https://api.magicthegathering.io/v1/cards?' + );
-  //     $query.done((data) => {
-  //       if($query.status !== 200){
-  //         return;
-  //       }
-  //       console.log(data);
-  //       display(data);
+
+  var baseUrl = "https://api.magicthegathering.io/v1/cards?"
+  var getUrl = baseUrl + colorSelect + typeSelect + raritySelect + eternalSelect + modernSelect + nameSelect;
+  console.log(getUrl)
+  $.get(getUrl).then(function(data) {
+    console.log(data)
+    var cards = data.cards; //array of cards
+    for (var i = 0; i < cards.length; i++) {
+      updatePage(cards[i]);
+    }
+  })
 
   //console.log(addColors)
   //console.log(addTheme)
@@ -201,24 +147,28 @@ $("#submit").click(function(event) {
   console.log(modernSelect)
   console.log(nameSelect)
 })
-//
-// function convert(text) {
-//   for (var i = 0; i < array.length; i++) {
-//     array[i]
-//   }
-//
-// }
 
-//   var $query = $.getJSON('https://api.magicthegathering.io/v1/cards?name=' + search + colorPick);
-//   $query.done((data) => {
-//     if($query.status !== 200){
-//       return;
+
+
+// function getCard() {
+//   var url = "https://api.magicthegathering.io/v1/cards?"
+//   url + colorSelect + typeSelect + raritySelect + eternalSelect + modernSelect + nameSelect);
+//   $.get(url).then(function(data) {
+//     console.log(data)
+//     var cards = data.cards; //array of cards
+//     for (var i = 0; i < cards.length; i++) {
+//       updatePage(cards[i]);
 //     }
-//     console.log(data);
-//     display(data);
 //   })
-// })
+  // .catch(function(error) {
+  //   console.log(error)
+  // }
+// };
 
+function updatePage(card) {
+  //$("body").append(card.name)
+    $(".pic-container").append('<img src="'+ card.imageUrl + '">')
+};
 
 
 
@@ -227,29 +177,17 @@ $("#submit").click(function(event) {
 //
 // function updatePage(card) {
 //   //$("body").append(card.name)
-//   $("body").append('<img src="'+ card.imageUrl + '">')
+//   $(".pic-container").append('<img src="'+ card.imageUrl + '">')
 // };
-//
-              // function showMessage(title, poster) {
-              //   $("body").append("Cool movie, yo")
-              // }
-
-              //   $.get("http://www.omdbapi.com/?t=rambo",
-              //   function(data) {
-              // 	console.log(data);
-              // })
-
-
-
-
-// function getSet() {
-//   var setUrl = "https://api.magicthegathering.io/v1/sets"
-//   setUrl += $("input").val()
-//   $.get(setUrl).then(function(setData) {
-//
-//     var sets = setData.sets
-//     for (var i = 0; i < sets.length; i++) {
-//       console.log(sets[i])
+//               //
+//               // function showMessage(title, poster) {
+//               //   $("body").append("Cool movie, yo")
+//               // }
+//               //
+//               //   $.get("http://www.omdbapi.com/?t=rambo",
+//               //   function(data) {
+//               // 	console.log(data);
+//               // })
 //     }
 //     // var cards = data.cards; //array of cards
 //     // for (var i = 0; i < cards.length; i++) {
