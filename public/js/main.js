@@ -31,18 +31,62 @@ $('#white').click(function() {
   console.log("White was clicked")
 })
 
-
-
-
-
 function getActive() {
   var activeColors = ""
   var activeDivs = $('.active')
+  var colorSearch = "&colors=";
+  var colorStr = ""
     console.log(activeDivs)
-    for (var i = 0; i< activeDivs.length; i++) {
-        console.log(activeDivs[i].id)
+    for (var i = 0; i < activeDivs.length; i++) {
+        colorStr += (activeDivs[i].id) +"|"
      }
+     activeColors = colorSearch + (colorStr.slice(0,-1))
+     console.log(activeColors)
+     return activeColors
 }
+//
+// function getType() {
+//   var optType = $("#cardType").val();
+//   var typeSelect = "&type=" + optType;
+//   if(optType > 0) {
+//     return typeSelect;
+//  }
+// }
+//
+// function getRarity() {
+//   var optRarity = $("#rarity").val();
+//   var raritySelect = "&rarity=" + optRarity;
+//   if(optRarity > 0) {
+//    return raritySelect;
+//   }
+// }
+//
+// function getEternal() {
+//   var optEternal = $("#setsEternal").val();
+//   var eternalSelect = "&sets=" + optEternal;
+//   if(optEternal > 0) {
+//     return eternalSelect;
+//   }
+// }
+//
+//
+// function getModern() {
+//   var optModern = $("#setsModern").val();
+//   var modernSelect = "&sets=" + optModern;
+//   if(optModern > 0) {
+//     return modernSelect;
+//   }
+// }
+//
+// function getName() {
+//   var addName = $("#nameSearch").val();
+//   var nameSelect = "&name=" + optName;
+//   if(optModern > 0) {
+//     return nameSelect;
+//   }
+// }
+//
+
 
 
 //   function myFunction(item) {
@@ -122,21 +166,28 @@ $("#submit").click(function(event) {
   //console.log($("#addRarity").val())
   //var addColors = selectColors()
   //var addTheme = $("#colorTheme").val();
-  getActive()
-  var addType = $("#cardType").val();
-  var addRarity = $("#rarity").val();
-  var addEternal = $("#setsEternal").val();
-  var addModern = $("#setsModern").val();
-  var addSearch = $("#nameSearch").val();
+  var colorSelect = getActive();
+  // var typeSelect = getType();
+  // var raritySelect = getRarity();
+  // var eternalSelect = getEternal();
+  // var modernSelect = getModern();
+  // var nameSelect = getName();
+  // // $.getJSON('https://api.magicthegathering.io/v1/cards?' + );
+  //     $query.done((data) => {
+  //       if($query.status !== 200){
+  //         return;
+  //       }
+  //       console.log(data);
+  //       display(data);
 
   //console.log(addColors)
   //console.log(addTheme)
-  console.log(addType)
-  console.log(addRarity)
-  console.log(addEternal)
-  console.log(addModern)
-  console.log(addSearch)
-
+  console.log(colorSelect)
+  // console.log(typeSelect)
+  // console.log(raritySelect)
+  // console.log(eternalSelect)
+  // console.log(modernSelect)
+  // console.log(nameSelect)
 })
 //
 // function convert(text) {
