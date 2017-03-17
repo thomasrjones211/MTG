@@ -66,26 +66,33 @@ function getRarity() {
   console.log(raritySearch)
   return raritySearch;
   }
- }
+}
+
+function getEternal() {
+  var optEternal = $("#setsEternal").val();
+  var eternalSearch = "&sets=" + optEternal;
+  if(optEternal == 0) {
+    return
+  } else {
+  console.log(eternalSearch)
+  return eternalSearch;
+  }
+}
+
+function getModern() {
+  var optModern = $("#setsModern").val();
+  var modernSearch = "&sets=" + optModern;
+  if(optModern > 0) {
+    return
+  } else {
+  console.log(modernSearch)
+  return modernSearch;
+  }
+}
 
 
 
-// function getEternal() {
-//   var optEternal = $("#setsEternal").val();
-//   var eternalSelect = "&sets=" + optEternal;
-//   if(optEternal > 0) {
-//     return eternalSelect;
-//   }
-// }
-//
-//
-// function getModern() {
-//   var optModern = $("#setsModern").val();
-//   var modernSelect = "&sets=" + optModern;
-//   if(optModern > 0) {
-//     return modernSelect;
-//   }
-// }
+
 //
 // function getName() {
 //   var addName = $("#nameSearch").val();
@@ -178,8 +185,8 @@ $("#submit").click(function(event) {
   var colorSelect = getActive();
   var typeSelect = getType();
   var raritySelect = getRarity();
-  // var eternalSelect = getEternal();
-  // var modernSelect = getModern();
+  var eternalSelect = getEternal();
+  var modernSelect = getModern();
   // var nameSelect = getName();
   // // $.getJSON('https://api.magicthegathering.io/v1/cards?' + );
   //     $query.done((data) => {
@@ -194,8 +201,8 @@ $("#submit").click(function(event) {
   console.log(colorSelect)
   console.log(typeSelect)
   console.log(raritySelect)
-  // console.log(eternalSelect)
-  // console.log(modernSelect)
+  console.log(eternalSelect)
+  console.log(modernSelect)
   // console.log(nameSelect)
 })
 //
