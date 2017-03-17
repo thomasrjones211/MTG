@@ -31,14 +31,14 @@ $('#white').click(function() {
 })
 
 function getActive() {
-  var activeColors = ""
-  var activeDivs = $('.active')
+  var activeColors = "";
+  var activeDivs = $('.active');
   var colorSearch = "&colors=";
-  var colorStr = ""
+  var colorStr = "";
   if(activeDivs == 0) {
     return "something"
   } else {
-  //console.log(activeDivs)
+  console.log(activeDivs)
     for (var i = 0; i < activeDivs.length; i++) {
         colorStr += (activeDivs[i].id) +"|"
      }
@@ -115,7 +115,7 @@ function getName() {
 $("#submit").click(function(event) {
   event.preventDefault()
 
-  $(".pic-container").empty();
+  //$(".pic-container").empty();
   // $(".pic-container").html("")
   //console.log($("#addRarity").val())
   //var addColors = selectColors()
