@@ -36,31 +36,40 @@ function getActive() {
   var activeDivs = $('.active')
   var colorSearch = "&colors=";
   var colorStr = ""
-    console.log(activeDivs)
+    //console.log(activeDivs)
     for (var i = 0; i < activeDivs.length; i++) {
         colorStr += (activeDivs[i].id) +"|"
      }
      activeColors = colorSearch + (colorStr.slice(0,-1))
-     console.log(activeColors)
+    // console.log(activeColors)
      return activeColors
 }
-//
-// function getType() {
-//   var optType = $("#cardType").val();
-//   var typeSelect = "&type=" + optType;
-//   if(optType > 0) {
-//     return typeSelect;
-//  }
-// }
-//
-// function getRarity() {
-//   var optRarity = $("#rarity").val();
-//   var raritySelect = "&rarity=" + optRarity;
-//   if(optRarity > 0) {
-//    return raritySelect;
-//   }
-// }
-//
+
+function getType() {
+  var optType = $("#cardType").val();
+  var typeSearch = "&type=" + optType;
+  console.log(optType)
+  if(optType == 0) {
+    return
+  } else {
+  console.log(typeSearch)
+  return typeSearch;
+  }
+}
+
+function getRarity() {
+  var optRarity = $("#rarity").val();
+  var raritySearch = "&rarity=" + optRarity;
+  if(optRarity == 0) {
+    return
+  } else {
+  console.log(raritySearch)
+  return raritySearch;
+  }
+ }
+
+
+
 // function getEternal() {
 //   var optEternal = $("#setsEternal").val();
 //   var eternalSelect = "&sets=" + optEternal;
@@ -167,8 +176,8 @@ $("#submit").click(function(event) {
   //var addColors = selectColors()
   //var addTheme = $("#colorTheme").val();
   var colorSelect = getActive();
-  // var typeSelect = getType();
-  // var raritySelect = getRarity();
+  var typeSelect = getType();
+  var raritySelect = getRarity();
   // var eternalSelect = getEternal();
   // var modernSelect = getModern();
   // var nameSelect = getName();
@@ -183,8 +192,8 @@ $("#submit").click(function(event) {
   //console.log(addColors)
   //console.log(addTheme)
   console.log(colorSelect)
-  // console.log(typeSelect)
-  // console.log(raritySelect)
+  console.log(typeSelect)
+  console.log(raritySelect)
   // console.log(eternalSelect)
   // console.log(modernSelect)
   // console.log(nameSelect)
