@@ -82,7 +82,7 @@ function getEternal() {
 function getModern() {
   var optModern = $("#setsModern").val();
   var modernSearch = "&sets=" + optModern;
-  if(optModern > 0) {
+  if(optModern == 0) {
     return
   } else {
   console.log(modernSearch)
@@ -90,20 +90,16 @@ function getModern() {
   }
 }
 
-
-
-
-//
-// function getName() {
-//   var addName = $("#nameSearch").val();
-//   var nameSelect = "&name=" + optName;
-//   if(optModern > 0) {
-//     return nameSelect;
-//   }
-// }
-//
-
-
+function getName() {
+  var addName = $("#nameSearch").val();
+  var textSearch = "&name=" + addName;
+  if(addName == 0) {
+    return
+  } else {
+  console.log(textSearch)
+  return textSearch;
+  }
+}
 
 //   function myFunction(item) {
 //   sum += item;
@@ -187,7 +183,7 @@ $("#submit").click(function(event) {
   var raritySelect = getRarity();
   var eternalSelect = getEternal();
   var modernSelect = getModern();
-  // var nameSelect = getName();
+  var nameSelect = getName();
   // // $.getJSON('https://api.magicthegathering.io/v1/cards?' + );
   //     $query.done((data) => {
   //       if($query.status !== 200){
@@ -203,7 +199,7 @@ $("#submit").click(function(event) {
   console.log(raritySelect)
   console.log(eternalSelect)
   console.log(modernSelect)
-  // console.log(nameSelect)
+  console.log(nameSelect)
 })
 //
 // function convert(text) {
