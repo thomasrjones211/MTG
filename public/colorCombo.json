@@ -1,0 +1,81 @@
+[
+  {
+     "name":"Selesnya",
+     "colors":"green,white"
+  }   {
+     "name":"Orzhov",
+     "colors":"black,white"
+  }   {
+     "name":"Boros",
+     "colors":"red,white"
+  }   {
+     "name":"Azorius",
+     "colors":"blue,white"
+  }   {
+     "name":"Dimir",
+     "colors":"black,blue"
+  }   {
+     "name":"Rakdos",
+     "colors":"black,red"
+  }   {
+     "name":"Golgari",
+     "colors":"black,green"
+  }   {
+     "name":"Izzet",
+     "colors":"blue,red"
+  }   {
+     "name":"Simic",
+     "colors":"blue,green"
+  }   {
+     "name":"Gruul",
+     "colors":"green,red"
+  }   {
+     "name":"Naya",
+     "colors":"green,red,white"
+  }   {
+     "name":"Esper",
+     "colors":"black,blue,white"
+  }   {
+     "name":"Grixis",
+     "colors":"black,blue,red"
+  }   {
+     "name":"Jund",
+     "colors":"black,green,red"
+  }   {
+     "name":"Bant",
+     "colors":"blue,green,white"
+  }   {
+     "name":"Abzan",
+     "colors":"black,green,white"
+  }   {
+     "name":"Temur",
+     "colors":"blue,green,red"
+  }   {
+     "name":"Jeskai",
+     "colors":"blue,red,white"
+  }   {
+     "name":"Mardu",
+     "colors":"black,red,white"
+  }   {
+     "name":"Sultai",
+     "colors":"black,blue,green"
+  }   {
+     "name":"Glint",
+     "colors":"black,blue,green,red"
+  }   {
+     "name":"Dune",
+     "colors":"black,green,red,white"
+  }   {
+     "name":"Ink",
+     "colors":"blue,green,red,white"
+  }   {
+     "name":"Witch",
+     "colors":"black,blue,green,white"
+  }   {
+     "name":"Yore",
+     "colors":"black,blue,red,white"
+  }   {
+     "name":"Domain",
+     "colors":"black,blue,green,red,white"
+  }
+]
